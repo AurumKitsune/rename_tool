@@ -1,0 +1,15 @@
+[package]
+name = "rename_tool"
+version = "1.0.0"
+authors = ["AurumKitsune"]
+edition = "2021"
+description = "A simple bulk renaming tool"
+
+[dependencies]
+chrono = "0.4.23"
+clap = { version = "4.1.6", features = ["derive"] }
+
+[profile.release]
+lto = true
+panic = "abort"
+codegen-units = 1
